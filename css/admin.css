@@ -1,0 +1,12 @@
+#footer {
+    background-color: blueviolet;
+    color: white;
+    margin-top: 5%;
+}
+
+.custom-card{
+    background-color: #eee;
+    border-radius: 6%;
+    padding: 20px 40px 80px 160px;
+}
+
