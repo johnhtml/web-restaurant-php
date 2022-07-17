@@ -1,10 +1,16 @@
 <div class="container">
-    <h5>Admin</h5>
+    <h5>Manage admins</h5>
+
+    <div class="d-flex justify-content-end">
+        <a href="./add-admin.php" class="btn btn-outline-primary">Add admin</a>
+    </div>
+
+
     <table class="table table-hover">
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Full Name</th>
+                <th scope="col">Food</th>
                 <th scope="col">Username</th>
                 <th scope="col">Actions</th>
             </tr>
@@ -14,19 +20,43 @@
                 <th scope="row">1</th>
                 <td>Mark</td>
                 <td>Otto</td>
-                <td>update admin delete admin</td>
+                <td>
+                    <a href="#" class="btn btn-outline-info">
+                        update admin
+                    </a>
+
+                    <a href="#" class="btn btn-outline-danger">
+                        delete admin
+                    </a>
+                </td>
             </tr>
             <tr>
                 <th scope="row">2</th>
                 <td>Jacob</td>
                 <td>Thornton</td>
-                <td>update admin delete admin</td>
+                <td>
+                    <a href="#" class="btn btn-outline-info">
+                        update admin
+                    </a>
+
+                    <a href="#" class="btn btn-outline-danger">
+                        delete admin
+                    </a>
+                </td>
             </tr>
             <tr>
                 <th scope="row">3</th>
                 <td>Larry the Bird</td>
                 <td>Thornton</td>
-                <td>update admin delete admin</td>
+                <td>
+                    <a href="#" class="btn btn-outline-info">
+                        update admin
+                    </a>
+
+                    <a href="#" class="btn btn-outline-danger"> 
+                        delete admin
+                    </a>
+                </td>
             </tr>
         </tbody>
     </table>
