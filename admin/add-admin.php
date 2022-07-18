@@ -66,10 +66,19 @@ if (isset($_POST['submit'])) {
     #1. Get the data form the Form
     $full_name = $_POST['full_name'];
     $username = $_POST['username'];
-    
+    $password = md5($_POST['password']);
+
     #2. SQL Query to save the data in the database
+    $sql = "INSER INTO tbl_admin 
+        full_name = '$full_name',
+        username = '$username',
+        password = '$password'
+    ";
+
+    //3. Execute Query and save data
     
 
+    $res = mysqli_query($conn, $sql) or die(mysqli_error($mysqli->error));
 } else {
     # Button no clicked
 }
