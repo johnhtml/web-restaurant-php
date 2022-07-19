@@ -7,6 +7,15 @@ include_once("./partials/navbar.php");
 <div class="container">
     <h5 class="mt-4">Add admin</h5>
 
+    <?php
+    if (isset($_SESSION['add'])) {
+        echo $_SESSION['add'];
+        unset($_SESSION['add']);
+    }
+    ?>
+    <br />
+
+
     <form class="mt-4" action="" method="POST">
 
         <div class="row mt-2">
@@ -69,16 +78,34 @@ if (isset($_POST['submit'])) {
     $password = md5($_POST['password']);
 
     #2. SQL Query to save the data in the database
-    $sql = "INSER INTO tbl_admin 
+    $sql = "INSERT INTO tbl_admin SET
         full_name = '$full_name',
         username = '$username',
         password = '$password'
     ";
 
     //3. Execute Query and save data
-    
+    $res = mysqli_query($conn, $sql) or die('error query');
 
-    $res = mysqli_query($conn, $sql) or die(mysqli_error($mysqli->error));
+    //4. Check wheter the Query is executed (the data is inserted)
+    //or not and display a message according the result
+    if ($res == TRUE) {
+        # Data inserted
+        //echo 'Data inserted';
+        //Create a Session Instance to display
+        $_SESSION['add'] = "Admin Added Successfully";
+
+        //Redirect page to manage admin
+        header("location:" . SITE_URL . 'admin/manage-admin.php');
+    } else {
+        # Data no inserted
+        echo 'Data not inserted';
+
+        //Create a Session Instance to display
+        $_SESSION['add'] = "Failed to Add Admin";
+        //Redirect page to manage admin
+        header("location:" . SITE_URL . 'admin/add-admin.php');
+    }
 } else {
     # Button no clicked
 }
