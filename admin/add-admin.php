@@ -93,7 +93,7 @@ if (isset($_POST['submit'])) {
         # Data inserted
         //echo 'Data inserted';
         //Create a Session Instance to display
-        $_SESSION['add'] = "Admin Added Successfully";
+        $_SESSION['add'] = "<span class='badge rounded-pill text-bg-info'>Admin Added Successfully</span>";
 
         //Redirect page to manage admin
         header("location:" . SITE_URL . 'admin/manage-admin.php');
@@ -102,7 +102,7 @@ if (isset($_POST['submit'])) {
         echo 'Data not inserted';
 
         //Create a Session Instance to display
-        $_SESSION['add'] = "Failed to Add Admin";
+        $_SESSION['add'] = "<span class='badge rounded-pill text-bg-info'>Failed to Add Admin</span>";
         //Redirect page to manage admin
         header("location:" . SITE_URL . 'admin/add-admin.php');
     }

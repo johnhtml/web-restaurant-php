@@ -7,6 +7,11 @@
         echo $_SESSION['add'];
         unset($_SESSION['add']);
     }
+
+    if (isset($_SESSION['delete'])) {
+        echo $_SESSION['delete'];
+        unset($_SESSION['delete']);
+    }
     ?>
     <br />
 
@@ -48,15 +53,15 @@
                         //Display values in the table
             ?>
                         <tr>
-                            <th scope="row"><?php echo $i++ ?></th>
-                            <td><?php echo $full_name ?></td>
-                            <td><?php echo $username ?></td>
+                            <th scope="row"><?php echo $i++; ?></th>
+                            <td><?php echo $full_name; ?></td>
+                            <td><?php echo $username; ?></td>
                             <td>
                                 <a href="#" class="btn btn-outline-info">
                                     update admin
                                 </a>
 
-                                <a href="#" class="btn btn-outline-danger">
+                                <a href="<?php echo SITE_URL; ?>admin/delete-admin.php?id=<?php echo $id; ?>" class="btn btn-outline-danger">
                                     delete admin
                                 </a>
                             </td>
