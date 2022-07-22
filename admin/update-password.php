@@ -120,7 +120,7 @@ if (isset($_POST['submit'])) {
                 header('location:' . SITE_URL . 'admin/manage-admin.php');
             }
         } else {
-            $_SESSION['user-not-found'] = "<span class='badge rounded-pill text-bg-danger'>User not found </span>";
+            $_SESSION['user-not-found'] = "<span class='badge rounded-pill text-bg-danger'>Incorrect password</span>";
             //redirect
             header('location:' . SITE_URL . 'admin/manage-admin.php');
         }

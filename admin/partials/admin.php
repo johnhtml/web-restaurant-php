@@ -1,7 +1,6 @@
 <div class="container">
     <h5>Manage admins</h5>
 
-
     <?php
     if (isset($_SESSION['add'])) {
         echo $_SESSION['add'];

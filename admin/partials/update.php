@@ -66,9 +66,6 @@
             <input type="submit" class="btn btn-outline-primary" name="submit" value="Update admin">
             </input>
         </div>
-
-    </form>
-
     </form>
 </div>
 
@@ -95,14 +92,13 @@ if (isset($_POST['submit'])) {
     $res = mysqli_query($conn, $sql);
 
     //Check if the query was executed
-    if ($res==true) {
-        
-        $_SESSION['update'] = "<span class='badge rounded-pill text-bg-info'>Admin Updated Successfully</span>";
-        header('location:'.SITE_URL.'admin/manage-admin.php');
+    if ($res == true) {
 
+        $_SESSION['update'] = "<span class='badge rounded-pill text-bg-info'>Admin Updated Successfully</span>";
+        header('location:' . SITE_URL . 'admin/manage-admin.php');
     } else {
         $_SESSION['update'] = "<span class='badge rounded-pill text-bg-danger'>Failed to update admin</span>";
-        header('location:'.SITE_URL.'admin/manage-admin.php');
+        header('location:' . SITE_URL . 'admin/manage-admin.php');
     }
 }
 

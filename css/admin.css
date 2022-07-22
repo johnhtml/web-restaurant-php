@@ -10,3 +10,11 @@
     padding: 20px 40px 80px 160px;
 }
 
+#login-container{
+    background-color: rgb(150, 81, 214);
+    color:antiquewhite;
+    border-radius: 1%;
+    padding: 5%;
+}
+
+
