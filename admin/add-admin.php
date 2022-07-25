@@ -59,16 +59,12 @@ include_once("./partials/navbar.php");
     </form>
 </div>
 
-<?php
-include_once("./partials/footer.php");
-include_once("./partials/script.php");
-?>
+
 
 <?php
 //Process the Value from the Form and Save it in the DB
 
 //Check wheter the submit button is clicked or not
-
 if (isset($_POST['submit'])) {
     # Button clicked
 
@@ -85,7 +81,7 @@ if (isset($_POST['submit'])) {
     ";
 
     //3. Execute Query and save data
-    $res = mysqli_query($conn, $sql) or die('error query');
+    $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
     //4. Check wheter the Query is executed (the data is inserted)
     //or not and display a message according the result
@@ -109,7 +105,9 @@ if (isset($_POST['submit'])) {
 } else {
     # Button no clicked
 }
-
 ?>
 
+<?php
+include_once("./partials/footer.php");
+?>
 </html>

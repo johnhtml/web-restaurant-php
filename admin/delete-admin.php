@@ -25,10 +25,9 @@ if ($res == true) {
     //echo "Failed to delete admin";
 
     $_SESSION['delete'] = "<span class='badge rounded-pill text-bg-danger'>Failed to delete admin. Please try again later</span>";
+
+    //3. Redirect to Manage Admin page with message, i.e. success or error
     header('location:' . SITE_URL . 'admin/manage-admin.php');
 }
-
-//3. Redirect to Manage Admin page with message, i.e. success or error
-
 
 ?>
