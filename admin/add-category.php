@@ -99,7 +99,7 @@
             header('location:' . SITE_URL . 'admin/manage-category.php');
         } else {
             # Error adding the new category
-            $_SESSION['add'] = "<span class='badge rounded-pill text-bg-danger'>An error occurred adding the new category '$title' '$featured' '$sql'</span>";
+            $_SESSION['add'] = "<span class='badge rounded-pill text-bg-danger'>An error occurred adding the new category</span>";
             # Redirect 
             header('location:' . SITE_URL . 'admin/manage-category.php');
         }

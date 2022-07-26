@@ -12,7 +12,7 @@
     $sql = "SELECT full_name, username FROM tbl_admin WHERE id = $id";
 
     //3. Execute the query
-    $res = mysqli_query($conn, $sql);
+    $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
     //4. Check whether the query is executed or not
     if ($res == true) {
@@ -89,7 +89,7 @@ if (isset($_POST['submit'])) {
     ";
 
     //Execute the query
-    $res = mysqli_query($conn, $sql);
+    $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
     //Check if the query was executed
     if ($res == true) {

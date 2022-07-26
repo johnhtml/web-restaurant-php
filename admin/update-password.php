@@ -80,7 +80,7 @@ if (isset($_POST['submit'])) {
     $sql = "SELECT * FROM tbl_admin WHERE id=$id AND password='$current_password'";
 
     //execute the query
-    $res = mysqli_query($conn, $sql);
+    $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
     if ($res == true) {
         //check if the data is available
@@ -99,7 +99,7 @@ if (isset($_POST['submit'])) {
                 ";
 
                 //execute the query
-                $res2 = mysqli_query($conn, $sql2);
+                $res2 = mysqli_query($conn, $sql2) or die(mysqli_error($conn));
 
                 //check if the query was executed
                 if ($res2 == true) {

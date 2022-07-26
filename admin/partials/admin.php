@@ -55,7 +55,7 @@
             $sql = "SELECT * FROM tbl_admin";
 
             //Execute the Query
-            $res = mysqli_query($conn, $sql);
+            $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
             //Check wheter the query was executed
             if ($res == True) {

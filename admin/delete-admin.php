@@ -10,7 +10,7 @@ $id = $_GET['id'];
 $sql = "DELETE FROM tbl_admin WHERE id=$id";
 
 //Execute the Query
-$res = mysqli_query($conn, $sql);
+$res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
 //Check the query execution
 if ($res == true) {

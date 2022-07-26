@@ -83,7 +83,7 @@ if (isset($_POST['submit'])) {
     $sql = "SELECT * FROM tbl_admin WHERE username='$username' AND password='$password'";
 
     //3. Execute the query
-    $res = mysqli_query($conn, $sql);
+    $res = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
     //4. Check the result
     $count = mysqli_num_rows($res);
