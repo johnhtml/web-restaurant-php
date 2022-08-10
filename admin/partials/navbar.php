@@ -2,9 +2,7 @@
 include('../config/constants.php');
 include('../admin/partials/login-checking.php');
 ?>
-
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <!-- Important to make website responsive -->

@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html>
 <?php
 include_once("./partials/navbar.php");
 ?>
-
 <div class="container">
     <h5 class="mt-4">Add admin</h5>
 
@@ -19,12 +17,12 @@ include_once("./partials/navbar.php");
     <form class="mt-4" action="" method="POST">
 
         <div class="row mt-2">
-            <div class=" col-md-2">
+            <div class="col-md-2">
                 <label class="form-label" for="full_name">
                     Full name
                 </label>
             </div>
-            <div class=" col-md-8">
+            <div class="col-md-8">
                 <input class="form-control ml-2 mr-2" type="text" name="full_name" placeholder="Full name example">
             </div>
         </div>
@@ -95,10 +93,10 @@ if (isset($_POST['submit'])) {
         header("location:" . SITE_URL . 'admin/manage-admin.php');
     } else {
         # Data no inserted
-        echo 'Data not inserted';
+        //echo 'Data not inserted';
 
         //Create a Session Instance to display
-        $_SESSION['add'] = "<span class='badge rounded-pill text-bg-info'>Failed to Add Admin</span>";
+        $_SESSION['add'] = "<span class='badge rounded-pill text-bg-danger'>Failed to Add Admin</span>";
         //Redirect page to manage admin
         header("location:" . SITE_URL . 'admin/add-admin.php');
     }
@@ -106,8 +104,6 @@ if (isset($_POST['submit'])) {
     # Button no clicked
 }
 ?>
-
 <?php
 include_once("./partials/footer.php");
 ?>
-</html>

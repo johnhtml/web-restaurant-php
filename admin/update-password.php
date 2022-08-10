@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html>
 
 <?php
 include_once("./partials/navbar.php");
@@ -126,7 +125,7 @@ if (isset($_POST['submit'])) {
         }
     }
 
-    //3. check wheter the new password and confirm match or not
+    //3. check whether the new password and confirm match or not
 
     //4. change the password if the requeriments were fulfilled
 
@@ -137,5 +136,3 @@ if (isset($_POST['submit'])) {
 <?php
 include_once("./partials/footer.php");
 ?>
-
-</html>
